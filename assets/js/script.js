@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const qs = (selector) => document.querySelector(selector);
     const qsa = (selector) => document.querySelectorAll(selector);
 
+
+
+    const preloader = qs('.preloader');
+    setTimeout(() => {
+        preloader.classList.remove('active');
+    }, 2000)
+
     
     let footerHeight  = document.querySelector('.footer').offsetHeight;
     window.innerWidth < 800 ? footerHeight+=30 : footerHeight-=1;
@@ -40,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }) 
             console.log(mass)
-            anim(mass, 200)
+            anim(mass, 100)
         }
     }
     
